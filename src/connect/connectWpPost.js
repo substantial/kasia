@@ -78,7 +78,7 @@ export default function connectWpPost (contentType, id) {
       static __kasia = true
 
       static makePreloader = () => {
-        const id = idGen()
+        const id = queryIds.length
         queryIds.push(id)
         return makeWpPostPreloaderFn(id, contentType, getIdentifier, targetName)
       }
